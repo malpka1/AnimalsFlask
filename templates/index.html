@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Animals {% endblock %}</h1>
+    {% for animal in animals %}
+        <div class='message'>
+            <h3>{{ animal.name }}</h3>
+            <p>{{ animal.description }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}

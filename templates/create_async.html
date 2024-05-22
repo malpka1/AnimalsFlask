@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Add a New Animal (Async) {% endblock %}</h1>
+    <form method="post">
+        <label for="name">Name</label>
+        <input type="text" name="name" placeholder="Animal name" value="{{ request.form.get('name', '') }}">
+
+        <label for="description">Description</label>
+        <textarea name="description" placeholder="Animal description" rows="5">{{ request.form.get('description', '') }}</textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}
